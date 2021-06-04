@@ -15,6 +15,7 @@ opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
 
 opt.completeopt = { "menuone", "noselect"}
 
+opt.termguicolors = true
 opt.showmode = false
 opt.showcmd = true
 opt.cmdheight = 1 -- Height of the command bar

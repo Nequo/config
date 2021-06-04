@@ -2,7 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
-    use 'romainl/Apprentice'
+    --use 'romainl/Apprentice'
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'neovim/nvim-lspconfig'

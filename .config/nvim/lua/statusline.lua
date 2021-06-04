@@ -1,10 +1,10 @@
 local lualine = require 'lualine'
 local config = {
     options = {
-      theme = 'oceanicnext',
+      theme = 'apprentice',
       --section_separators = {'', ''},
       --component_separators = {'', ''},
-      component_separators = {'\\', '/'},
+      component_separators = {' ', ' '},
       section_separators = {' ', ' '},
       icons_enabled = true,
       path = 1,
@@ -60,7 +60,7 @@ ins_right {
     return msg
   end,
   icon = ' ',
-  color = {fg = '#99c794', gui = 'bold'}
+  color = {fg = '#87AF87', gui = 'bold'}
 }
 
 ins_right {
