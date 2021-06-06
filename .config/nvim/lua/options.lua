@@ -30,7 +30,7 @@ opt.signcolumn = "yes"
 opt.equalalways = false -- I don't like my windows changing all the time
 opt.splitright = true -- Prefer windows splitting to the right
 opt.splitbelow = true -- Prefer windows splitting to the bottom
-opt.updatetime = 100 -- Make updates happen faster
+opt.updatetime = 1000 -- Make updates happen faster
 opt.hlsearch = true -- Highlight searches
 opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
 

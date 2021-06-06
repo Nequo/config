@@ -2,9 +2,14 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
-    --use 'romainl/Apprentice'
+    use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+    
+    use {'lewis6991/gitsigns.nvim',requires = { 'nvim-lua/plenary.nvim' }
+}
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'nvim-treesitter/playground'
+
     use 'neovim/nvim-lspconfig'
     use 'kosayoda/nvim-lightbulb'
     use 'folke/lsp-trouble.nvim'

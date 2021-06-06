@@ -1,6 +1,7 @@
 local lualine = require 'lualine'
 local config = {
     options = {
+      disabled_filetypes ={'NvimTree'},
       theme = 'apprentice',
       --section_separators = {'', ''},
       --component_separators = {'', ''},

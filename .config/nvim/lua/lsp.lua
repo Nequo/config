@@ -77,7 +77,7 @@ lspconfig.pyright.setup{}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = true,
+    virtual_text = false,
     signs = true,
     underline = true,
     update_in_insert = false,
@@ -88,19 +88,19 @@ local sign_define = vim.fn.sign_define
 
 -- Define the diagnostic signs
 sign_define("LspDiagnosticsSignError", {
-    text = "◉",
+    text = " ",
     texthl = "LspDiagnosticsDefaultError"
 })
 sign_define("LspDiagnosticsSignWarning", {
-    text = "•",
+    text = " ",
     texthl = "LspDiagnosticsDefaultWarning"
 })
 sign_define("LspDiagnosticsSignInformation", {
-    text = "•",
+    text = " ",
     texthl = "LspDiagnosticsDefaultInformation"
 })
 sign_define("LspDiagnosticsSignHint", {
-    text = "⋄",
+    text = " ",
     texthl = "LspDiagnosticsDefaultHint"
 })
 
@@ -133,9 +133,9 @@ vim.lsp.protocol.CompletionItemKind = {
     " [constant]",
     "  [struct]",
                                         
-    "⌘ [event]",
+    " [event]",
     " [operator]",
-    "♛ [type]"
+    "卑 [type]"
 }
 
 
@@ -144,5 +144,4 @@ require("trouble").setup {}
 
 -- nvim-lightbulb
 vim.fn.sign_define("LightBulbSign", { text = "", texthl = "LspDiagnosticsSignWarning" })
-vim.cmd ( [[ autocmd CursorHold * lua require("nvim-lightbulb").update_lightbulb { sign_priority = 10 } ]]
-)
+vim.cmd ( [[ autocmd CursorHold * lua require("nvim-lightbulb").update_lightbulb { sign_priority = 10 } ]])
