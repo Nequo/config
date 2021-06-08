@@ -15,16 +15,17 @@ set -U fish_color_operator            cyan
 set -U fish_color_param               brblue
 set -U fish_color_quote               yellow
 set -U fish_color_redirection         bryellow
-set -U fish_color_search_match        'bryellow' '--background=brblack'
-set -U fish_color_selection           'white' '--bold' '--background=brblack'
+set -U fish_color_search_match        'black' '--background=brblack'
+set -U fish_color_selection           'bryellow' '--bold' '--background=brblack'
 set -U fish_color_status              red
 set -U fish_color_user                brgreen
 set -U fish_color_valid_path          --underline
 set -U fish_pager_color_completion    normal
 set -U fish_pager_color_description   yellow
-set -U fish_pager_color_prefix        'white' '--bold' '--underline'
+set -U fish_pager_color_prefix        'green' '--bold' '--underline'
 set -U fish_pager_color_progress      'brwhite' '--background=cyan'
 
+set -gx EDITOR nvim
 alias vim=nvim
 alias config='/usr/bin/git --git-dir=/home/nequo/.cfg/ --work-tree=/home/nequo'
 starship init fish | source
