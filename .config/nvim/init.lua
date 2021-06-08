@@ -1,6 +1,6 @@
 require 'plugins'
-require 'ui'
 require 'options'
+require 'ui'
 require 'statusline'
 require 'completion'
 require 'keybindings'

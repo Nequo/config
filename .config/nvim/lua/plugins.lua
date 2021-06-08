@@ -15,6 +15,7 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use '~/git/Apprentice/'
 
+    use 'norcalli/nvim-colorizer.lua'
     use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
     
     use {'lewis6991/gitsigns.nvim',requires = { 'nvim-lua/plenary.nvim' }}
