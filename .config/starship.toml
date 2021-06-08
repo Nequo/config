@@ -8,5 +8,8 @@ disabled = false
 [rust]
 symbol = " "
 
+[python]
+symbol = " "
+
 [git_branch]
 symbol = " "
