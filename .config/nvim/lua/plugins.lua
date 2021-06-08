@@ -16,9 +16,15 @@ return require('packer').startup(function()
     use '~/git/Apprentice/'
 
     use 'norcalli/nvim-colorizer.lua'
-    use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+    use {
+        "npxbr/gruvbox.nvim", 
+        requires = {"rktjmp/lush.nvim"}
+    }
     
-    use {'lewis6991/gitsigns.nvim',requires = { 'nvim-lua/plenary.nvim' }}
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/playground'
@@ -36,8 +42,11 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
     }
-    use 'kyazdani42/nvim-web-devicons'
-    use 'kyazdani42/nvim-tree.lua'
+
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
 
     use {
         'hoob3rt/lualine.nvim',
