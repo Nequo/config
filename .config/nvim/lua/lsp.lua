@@ -1,4 +1,5 @@
 local lspconfig = require'lspconfig'
+local M = {}
 
 -- nvim-lsp
 -- Use an on_attach function to only map the following keys 
@@ -42,24 +43,25 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 }
 
 
-lspconfig.rust_analyzer.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = {
-        ["rust-analyzer"] = {
-            assist = {
-                importMergeBehavior = "last",
-                importPrefix = "by_self",
-            },
-            cargo = {
-                loadOutDirsFromCheck = true
-            },
-            procMacro = {
-                enable = true
-            },
-        }
-    }
-})
+-- Not needed as gets handled in rust-tools
+-- lspconfig.rust_analyzer.setup({
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     settings = {
+--         ["rust-analyzer"] = {
+--             assist = {
+--                 importMergeBehavior = "last",
+--                 importPrefix = "by_self",
+--             },
+--             cargo = {
+--                 loadOutDirsFromCheck = true
+--             },
+--             procMacro = {
+--                 enable = true
+--             },
+--         }
+--     }
+-- })
 
 lspconfig.gopls.setup {
     cmd = {"gopls", "serve"},
@@ -88,20 +90,20 @@ local sign_define = vim.fn.sign_define
 
 -- Define the diagnostic signs
 sign_define("LspDiagnosticsSignError", {
-    text = " ",
-    texthl = "LspDiagnosticsDefaultError"
+    --text = " ",
+    text = "•",
 })
 sign_define("LspDiagnosticsSignWarning", {
-    text = " ",
-    texthl = "LspDiagnosticsDefaultWarning"
+    --text = " ",
+    text = "•",
 })
 sign_define("LspDiagnosticsSignInformation", {
-    text = " ",
-    texthl = "LspDiagnosticsDefaultInformation"
+    --text = " ",
+    text = "•",
 })
 sign_define("LspDiagnosticsSignHint", {
-    text = " ",
-    texthl = "LspDiagnosticsDefaultHint"
+    --text = " ",
+    text = "•",
 })
 
 -- LSP Icons
@@ -143,5 +145,11 @@ vim.lsp.protocol.CompletionItemKind = {
 require("trouble").setup {}
 
 -- nvim-lightbulb
-vim.fn.sign_define("LightBulbSign", { text = "", texthl = "LspDiagnosticsSignWarning" })
+vim.fn.sign_define("LightBulbSign", { text = "", texthl = "GruvboxYellowSign" })
 vim.cmd ( [[ autocmd CursorHold * lua require("nvim-lightbulb").update_lightbulb { sign_priority = 10 } ]])
+
+-- This will make these available to other lua files
+-- with e.g. require'lsp'.on_attach
+M.on_attach = on_attach
+M.capabilities = capabilities
+return M
