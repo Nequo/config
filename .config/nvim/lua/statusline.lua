@@ -1,8 +1,19 @@
 local lualine = require 'lualine'
+
+local custom_gruvbox = require'lualine.themes.gruvbox'
+-- Change the background of lualine_c section for normal mode
+custom_gruvbox.normal.c.bg = '#3c3836' -- rgb colors are supported
+custom_gruvbox.insert.c.bg = '#3c3836' -- rgb colors are supported
+custom_gruvbox.command.c.bg = '#3c3836' -- rgb colors are supported
+custom_gruvbox.visual.c.bg = '#3c3836' -- rgb colors are supported
+custom_gruvbox.insert.c.fg = '#a89984' -- rgb colors are supported
+custom_gruvbox.command.c.fg = '#a89984' -- rgb colors are supported
+custom_gruvbox.visual.c.fg = '#a89984' -- rgb colors are supported
+
 local config = {
     options = {
       disabled_filetypes ={'NvimTree'},
-      theme = 'apprentice',
+      theme = 'gruvbox',
       section_separators = {'', ''},
       component_separators = {'', ''},
       --component_separators = {' ', ' '},
@@ -61,7 +72,7 @@ ins_right {
     return msg
   end,
   icon = ' ',
-  color = {fg = '#87AF87', gui = 'bold'}
+  color = {fg = '#b8bb26', gui = 'bold'}
 }
 
 ins_right {

@@ -13,13 +13,10 @@ end
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use '~/git/Apprentice/'
+    use '~/git/palefire-nvim/'
+    use 'gruvbox-community/gruvbox'
 
     use 'norcalli/nvim-colorizer.lua'
-    use {
-        "npxbr/gruvbox.nvim", 
-        requires = {"rktjmp/lush.nvim"}
-    }
     
     use {
         'lewis6991/gitsigns.nvim',
@@ -30,6 +27,7 @@ return require('packer').startup(function()
     use 'nvim-treesitter/playground'
 
     use 'neovim/nvim-lspconfig'
+    use 'simrat39/rust-tools.nvim'
     use 'kosayoda/nvim-lightbulb'
     use 'folke/lsp-trouble.nvim'
 
