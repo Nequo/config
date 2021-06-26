@@ -1,6 +1,5 @@
 vim.g.monokaipro_italic_keywords = false
-vim.g.monokaipro_flat_float = false
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme oceanicspace]]
 
 -- Telescope
 require("telescope").setup {

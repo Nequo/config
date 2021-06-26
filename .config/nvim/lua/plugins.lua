@@ -13,8 +13,7 @@ end
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use '~/git/palefire-nvim/'
-    use 'gruvbox-community/gruvbox'
+    use '~/git/oceanicspace'
 
     use 'norcalli/nvim-colorizer.lua'
     

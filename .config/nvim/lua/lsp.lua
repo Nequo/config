@@ -145,7 +145,7 @@ vim.lsp.protocol.CompletionItemKind = {
 require("trouble").setup {}
 
 -- nvim-lightbulb
-vim.fn.sign_define("LightBulbSign", { text = "", texthl = "GruvboxYellowSign" })
+vim.fn.sign_define("LightBulbSign", { text = "", texthl = "LspDiagnosticsSignInformation" })
 vim.cmd ( [[ autocmd CursorHold * lua require("nvim-lightbulb").update_lightbulb { sign_priority = 10 } ]])
 
 -- This will make these available to other lua files

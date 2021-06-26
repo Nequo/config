@@ -13,27 +13,27 @@ custom_gruvbox.visual.c.fg = '#a89984' -- rgb colors are supported
 local config = {
     options = {
       disabled_filetypes ={'NvimTree'},
-      theme = 'gruvbox',
-      section_separators = {'', ''},
-      component_separators = {'', ''},
+      theme = 'oceanicspace',
+      component_separators = {'', ''},
+      section_separators = {'', ''},
       --component_separators = {' ', ' '},
       --section_separators = {'', ''},
       icons_enabled = true,
       path = 1,
     },
     sections = {
-      lualine_a = { {'mode', upper = true} },
+      lualine_a = { {'location', padding = 0, left_padding = 0, right_padding = 0} },
       lualine_b = { {'branch', icon = ""} },
       lualine_c = { {'filename', file_status = true} },
       lualine_x = { },
-      lualine_y = { 'progress' },
-      lualine_z = { 'location'  },
+      lualine_y = { },
+      lualine_z = { },
     },
     inactive_sections = {
-      lualine_a = {  },
-      lualine_b = {  },
-      lualine_c = { 'filename' },
-      lualine_x = { 'location' },
+      lualine_a = { 'location' },
+      lualine_b = { 'filename' },
+      lualine_c = { },
+      lualine_x = { },
       lualine_y = {  },
       lualine_z = {   }
     }
@@ -72,7 +72,7 @@ ins_right {
     return msg
   end,
   icon = ' ',
-  color = {fg = '#b8bb26', gui = 'bold'}
+  color = {fg = '#57BA37', gui = 'bold'}
 }
 
 ins_right {
