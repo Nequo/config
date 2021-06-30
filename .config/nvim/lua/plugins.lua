@@ -13,8 +13,9 @@ end
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use '~/git/oceanicspace'
 
+    -- Colors
+    use '~/git/palefire-nvim'
     use 'norcalli/nvim-colorizer.lua'
     
     use {
@@ -22,29 +23,34 @@ return require('packer').startup(function()
         requires = { 'nvim-lua/plenary.nvim' }
     }
 
+    -- TreeSitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/playground'
 
+    -- Git
+    use 'sindrets/diffview.nvim'
+
+    -- LSP
     use 'neovim/nvim-lspconfig'
     use 'simrat39/rust-tools.nvim'
     use 'kosayoda/nvim-lightbulb'
     use 'folke/lsp-trouble.nvim'
 
+    -- Completion
     use 'hrsh7th/nvim-compe'
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
     use 'stevearc/vim-vsnip-snippets'
 
+    -- UI
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
     }
-
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-
     use {
         'hoob3rt/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
