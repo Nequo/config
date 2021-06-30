@@ -34,8 +34,8 @@ alias config='/usr/bin/git --git-dir=/home/nequo/.cfg/ --work-tree=/home/nequo'
 set -g tide_pwd_color_dirs black
 set -g tide_pwd_color_truncated_dirs black
 set -g tide_pwd_color_anchors black
-set -g lucid_prompt_symbol "ﮀ"
+set -g lucid_prompt_symbol " "
 
 set --export FZF_DEFAULT_OPTS --cycle --layout=reverse --border --height=90% --preview-window=wrap
 
-source $HOME/.config/fish/gruvbox.fish
+source $HOME/.config/fish/palefire.fish
