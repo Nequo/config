@@ -38,4 +38,4 @@ set -g lucid_prompt_symbol " "
 
 set --export FZF_DEFAULT_OPTS --cycle --layout=reverse --border --height=90% --preview-window=wrap
 
-source $HOME/.config/fish/palefire.fish
+source $HOME/.config/fish/onedark.fish
