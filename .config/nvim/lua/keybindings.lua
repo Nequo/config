@@ -30,3 +30,6 @@ keymap("n", "<leader>lt", "<cmd>LspTroubleToggle<cr>")
 -- Nvim-tree
 keymap('n', '<leader>op', "<cmd>NvimTreeToggle<cr>")
 
+-- Dashboard
+keymap('n', "<leader>ss", ":<C-u>SessionSave<CR>")
+keymap('n', "<leader>sl", ":<C-u>SessionLoad<CR>")

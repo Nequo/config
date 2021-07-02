@@ -10,10 +10,11 @@ custom_gruvbox.insert.c.fg = '#a89984' -- rgb colors are supported
 custom_gruvbox.command.c.fg = '#a89984' -- rgb colors are supported
 custom_gruvbox.visual.c.fg = '#a89984' -- rgb colors are supported
 
+local spaceline = require'spaceline'
 local config = {
     options = {
-      disabled_filetypes ={'NvimTree'},
-      theme = 'palefire',
+      disabled_filetypes ={'NvimTree', 'dashboard'},
+      theme = 'onedark',
       component_separators = {'', ''},
       -- section_separators = {'', ''},
       -- component_separators = {' ', ' '},
@@ -72,7 +73,7 @@ ins_right {
     return msg
   end,
   icon = ' ',
-  color = {fg = '#8DB98D', gui = 'bold'}
+  color = {fg = '#98c379', gui = 'bold'}
 }
 
 ins_right {

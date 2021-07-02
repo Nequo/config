@@ -1,7 +1,7 @@
 vim.g.monokaipro_italic_keywords = false
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_keywords = false
-vim.cmd [[colorscheme palefire]]
+vim.cmd [[colorscheme doom-one]]
 -- vim.cmd [[hi DiffAdd    guibg=#283B4D guifg=NONE]]
 -- vim.cmd [[hi DiffChange guibg=#283B4D guifg=NONE]]
 -- vim.cmd [[hi DiffDelete guibg=#3C2C3C guifg=#725272 gui=bold]]
@@ -66,3 +66,29 @@ require'diffview'.setup {
     }
   }
 }
+
+
+vim.cmd [[let g:dashboard_default_executive ='telescope']]
+vim.g['dashboard_default_executive']  = 'telescope'
+vim.cmd [[let g:dashboard_custom_header =<< trim END
+=================     ===============     ===============   ========  ========
+\\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //
+||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||
+|| . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||
+||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||
+|| . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||
+||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||
+|| . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||
+||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||
+||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||
+||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||
+||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||
+||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||
+||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||
+||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||
+||.=='    _-'                                                     `' |  /==.||
+=='    _-'                        N E O V I M                         \/   `==
+\   _-'                                                                `-_   /
+ `''                                                                      ``'
+END
+]]

@@ -15,13 +15,8 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- Colors
-    use '~/git/palefire-nvim'
+    use '~/git/doom-one.nvim'
     use 'norcalli/nvim-colorizer.lua'
-    
-    use {
-        'lewis6991/gitsigns.nvim',
-        requires = { 'nvim-lua/plenary.nvim' }
-    }
 
     -- TreeSitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -29,6 +24,10 @@ return require('packer').startup(function()
 
     -- Git
     use 'sindrets/diffview.nvim'
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
 
     -- LSP
     use 'neovim/nvim-lspconfig'
@@ -55,4 +54,5 @@ return require('packer').startup(function()
         'hoob3rt/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+    use 'glepnir/dashboard-nvim'
 end)
