@@ -10,11 +10,10 @@ custom_gruvbox.insert.c.fg = '#a89984' -- rgb colors are supported
 custom_gruvbox.command.c.fg = '#a89984' -- rgb colors are supported
 custom_gruvbox.visual.c.fg = '#a89984' -- rgb colors are supported
 
-local spaceline = require'spaceline'
 local config = {
     options = {
       disabled_filetypes ={'NvimTree', 'dashboard'},
-      theme = 'onedark',
+      theme = 'spacekraken',
       component_separators = {'', ''},
       -- section_separators = {'', ''},
       -- component_separators = {' ', ' '},

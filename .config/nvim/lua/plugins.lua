@@ -16,6 +16,7 @@ return require('packer').startup(function()
 
     -- Colors
     use '~/git/doom-one.nvim'
+    use '~/git/spacekraken'
     use 'norcalli/nvim-colorizer.lua'
 
     -- TreeSitter

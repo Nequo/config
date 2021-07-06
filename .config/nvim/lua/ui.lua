@@ -1,7 +1,7 @@
 vim.g.monokaipro_italic_keywords = false
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_keywords = false
-vim.cmd [[colorscheme doom-one]]
+vim.cmd [[colorscheme spacekraken]]
 -- vim.cmd [[hi DiffAdd    guibg=#283B4D guifg=NONE]]
 -- vim.cmd [[hi DiffChange guibg=#283B4D guifg=NONE]]
 -- vim.cmd [[hi DiffDelete guibg=#3C2C3C guifg=#725272 gui=bold]]
